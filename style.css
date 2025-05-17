@@ -1,77 +1,524 @@
-   body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: white;
-      color: #256b27;;
-      margin: 0;
-      padding: 0;
-      text-align: center;
-    }
-a{
-      color: #256b27;
-text-decoration: none;
-      padding: 0;
-        margin: 0;
-        font-style: normal;
-        font-weight: normal;
-    }
-    li {
+ body {
+   font-family: "Beiruti", sans-serif;
+   font-weight: 200;
+   padding: 20px;
+   margin: 0;
+   text-align: center;
+   color: #287543;
 
-      padding: 0;
-      margin: 0;
-      list-style: none;
-  margin: 0;
-  padding: 0;
-    
-      top: 0;
-   
-      word-spacing: 10px;
-      
-    }
-    header {
-      text-align: center;
-      padding: 2rem;
-      background-color: white;
+   background: linear-gradient(to bottom, #e3ffeabc, #ffffff);
+ }
+
+ .container {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 10px;
+   color: #f9fffb;
+   margin: 0 auto;
+
+ }
+
+ .container img {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 5px;
+   margin: 0 auto;
+   max-width: 100%;
+   border: #359851 solid 2px;
+   border-radius: 10px;
+   box-shadow: 0 0 5px #000000;
+ }
+
+ .box {
+   border: black solid 2px;
+   background-color: #287543;
+   color: #ffffff(242, 218, 109);
+   text-align: center;
+   padding: 20px;
+   border-radius: 10px;
+   flex: 1;
+   min-width: 120px;
+
+ }
+
+ .box img {
+   width: 100%;
+   height: auto;
+   border: black solid 2px;
+   background-color: #287543;
+   color: #ffffff(242, 218, 109);
+   box-shadow: 0 0 20px #050505;
+ }
+
+ .button-column {
+   position: fixed;
+   ;
+   top: 50%;
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+   margin-top: 20px;
+   animation: pulse 2s infinite;
+   transition: all 0.3s ease;
+
+
+ }
+
+ @keyframes pulse {
+   0% {
+     transform: scale(1);
+   }
+
+   50% {
+     transform: scale(1.05);
+   }
+
+   100% {
+     transform: scale(1);
+   }
+ }
+
+
+ .button {
+   background-color: rgb(255, 255, 255);
+   color: white;
+   border: #c0d17a solid 2px;
+   border-radius: 10px;
+   padding: 0;
+ }
+
+ .button-inner {
+   background-color: #359851;
+   border-radius: 10px;
+   color: white;
+   padding: 10px;
+   display: block;
+   width: 60px;
+   text-align: center;
+ }
+
+ h1 {
+   font-size: 48px;
+   margin: 20px 0 10px;
+   text-shadow: 2px 2px 2px #00000033;
+ }
+
+ .text {
+   margin-bottom: 20px;
+ }
+
+ .contact {
+
+   color: rgb(0, 0, 0);
+   padding: 10px;
+   border-radius: 10px;
+   text-align: center;
+   text-decoration: none;
+ }
+
+
+ a {
+
+
+
+   text-decoration: none;
+   color: inherit;
+ }
+
+
+ button {
+   position: relative;
+   width: 130px;
+   height: 35px;
+   border-radius: 30px;
+   background-color: white;
+   border: 1px #cd201f solid;
+   overflow: hidden;
+ }
+
+ .text1 {
+   font-size: 15px;
+   font-weight: 600;
+   margin-left: 22%;
+ }
+
+ .text2 {
+   position: absolute;
+   top: 25%;
+   left: -50px;
+   font-weight: 700;
+   font-size: 14px;
+   color: white;
+ }
+
+ .icon {
+   position: absolute;
+   top: 0;
+   left: 0;
+   transition: transform 0.5s;
+ }
+
+ .icon::before {
+   position: absolute;
+   left: -100px;
+   top: 0;
+   z-index: -1;
+   content: '';
+   width: 130px;
+   height: 33px;
+   border-radius: 30px;
+   background-color: #cd201f;
+ }
+
+ button:hover .icon {
+   transform: translateX(96px);
+   transition: transform 0.5s;
+ }
+
+ button:hover .text2 {
+   transform: translateX(100px);
+   transition: transform 0.6s;
+ }
+
+ button:active {
+   transform: scale(1.03);
+ }
+
+
+
+ .main {
+
+width: 60%;
+   display: flex;
+   flex-direction: column;
+   gap: 0.25em;
+   transition: all 0.2s ease-in-out;
+   margin: 0 auto;
+ }
+
+ .up {
+   display: flex;
+   flex-direction: row;
+   gap: 1em;
+ }
+
+ .down {
+   display: flex;
+   flex-direction: row;
+   gap: 0.5em;
+ }
+
+ .card1 {
+   margin: 0 auto;
+   width: 90%;
+   height: 90%;
+   min-width: 90px;
+   min-height: 90px;
+   outline: none;
+   border: black solid 2px;
+   background: white;
+   border-radius: 90px 5px 5px 5px;
+   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+   transition: .2s ease-in-out;
+ }
+
+ .youtube {
+   margin-top: 1.5em;
+   margin-left: 1.2em;
+   fill: #cc3939;
+ }
+
+ .card2 {
+   margin-left: -0.5em;
+   width: 90px;
+   height: 90px;
+   outline: none;
+   border: black solid 2px;
+   background: white;
+   border-radius: 5px 90px 5px 5px;
+   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+   transition: .2s ease-in-out;
+ }
+
+ .facebook {
+   margin-top: 1.5em;
+   margin-left: -.9em;
+   fill: #007eb9;
+ }
+
+ .card3 {
+   width: 90px;
+   height: 90px;
+   outline: none;
+   border: black solid 2px;
+   background: white;
+   border-radius: 5px 5px 5px 90px;
+   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+   transition: .2s ease-in-out;
+ }
+
+ .whatsapp {
+   margin-top: -.6em;
+   margin-left: 1.2em;
+   fill: #00bb00;
+ }
+
+ .card4 {
+   width: 90px;
+   height: 90px;
+   outline: none;
+   border: black solid 2px;
+   background: white;
+   border-radius: 5px 5px 90px 5px;
+   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+   transition: .2s ease-in-out;
+ }
+
+ .gmail {
+   margin-top: -.9em;
+   margin-left: -1.2em;
+   fill: #0099cc;
+ }
+
+ .card1:hover {
+   cursor: pointer;
+   scale: 1.05;
+   background-color: #cc3939;
+ }
+
+ .card1:hover .youtube {
+   fill: white;
+ }
+
+ .card2:hover {
+   cursor: pointer;
+   scale: 1.1;
+   background-color: #1468d7;
+ }
+
+ .card2:hover .facebook {
+   fill: white;
+ }
+
+ .card3:hover {
+   cursor: pointer;
+   scale: 1.1;
+   background-color: #50c250;
+ }
+
+ .card3:hover .whatsapp {
+   fill: white;
+ }
+
+ .card4:hover {
+   cursor: pointer;
+   scale: 1.1;
+   background-color: #0099cc;
+ }
+
+ .card4:hover .gmail {
+   fill: white;
+ }
+
+ .main {
+   cursor: pointer;
+   scale: 1.1;
+   margin: 0 auto;
+   text-align: center;
+   align-items: center;
+ }
+
+ .box:hover {
+   cursor: pointer;
+   scale: 1.05;
+   margin: 0 auto;
+   text-align: center;
+   transition: all 0.3s ease-in-out;
+   padding: 20px;
+
+   border: black solid 1px;
+   align-items: center;
+   background-color: #359851;
+ }
+
+
+
+
+ .loader {
+   width: 44.8px;
+   height: 44.8px;
+   position: relative;
+   transform: rotate(46deg);
+   margin: 0 auto;
+
+ }
+
+ .loader:before,
+ .loader:after {
+   content: "";
+   position: absolute;
+   inset: 0;
+   border-radius: 50% 50% 0 50%;
+   background: #0000;
+   background-image: radial-gradient(circle 11.2px at 50% 50%, #0000 94%, #ff4747);
+ }
+
+ .loader:after {
+   animation: pulse-ytk0dhmd 1s infinite;
+   transform: perspective(336px) translateZ(0px);
+ }
+
+ @keyframes pulse-ytk0dhmd {
+   to {
+     transform: perspective(336px) translateZ(168px);
+     opacity: 0;
+   }
+ }
+
+
  
-    }
 
-    header h1 {
-      font-size: 2.5rem;
-      color: #256b27;
-    }
+ 
+.button:before{
+content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 200px;
+  border: 2px solid #2bac47;
+  border-radius: 50%;
+  background-color: #2bac47;
+  transform: scale(0);
+  transition: transform 0.3s ease-in-out;
+  opacity: 1;
 
-    .p {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
-      padding: 2rem;
-      box-shadow: #174517 5px 5px 10px;
-      width: 400px;
-      margin: 0 auto;
-    }
 
-    .p {
-      background: #256b27;
-      padding: 1rem;
-      border-radius: 15px;
-      transition: transform 0.3s, background 0.3s;
-    }
 
-    .p:hover {
-      transform: scale(1.05);
-      background: #174517;
-    }
 
-    .p img {
-      max-width: 100%;
-      border-radius: 10px;
-      margin: auto;
-    }
+}
 
-    .p h2 {
-      color: #ffb347;
-    }
+ #address {
+   font-family: 'Courier New', Courier, monospace;
+   color: crimson;
+ }
 
-    .p p {
-      color: #dcdcdc;
-      font-size: 1rem;
-    }
+ #num {
+   color: #30C04F;
+ }
+
+
+ table, th, td {
+  border:3px solid #287543;
+  font-weight: bold;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.Btn {
+  width: 140px;
+  height: 40px;
+  border: none;
+  margin: auto;
+  border-radius: 10px;
+  background: linear-gradient(to right,#2bac47,#71f29e,#9bffb1,hsl(93, 42%, 62%),#58d885,#bdff77);
+  background-size: 250%;
+  background-position: left;
+  color: #359851;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition-duration: 1s;
+  overflow: hidden;
+}
+
+.Btn::before {
+  position: absolute;
+  content: "سجل الآن";
+ font-family: "Beiruti", sans-serif;
+  top: 0;
+  color: #95ff00;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 97%;
+  height: 90%;
+  border-radius: 8px;
+  transition-duration: 1s;
+  background-color: rgba(0, 0, 0, 0.842);
+  background-size: 200%;
+}
+
+.Btn:hover {
+  background-position: right;
+  transition-duration: 1s;
+  scale: 1.2;
+}
+
+.Btn:hover::before {
+  background-position: right;
+  transition-duration: 1s;
+}
+
+.Btn:active {
+  transform: scale(0.9);
+}
+th {
+  background-color: #287543;
+  color: white;
+}
+
+
+.button {
+  width: 60px;
+  height: 60px;
+  border: rgb(255, 255, 255) solid 10px;
+  margin: auto;
+  border-radius: 100%;
+  background: linear-gradient(to right,#2bac47,#71f29e,#9bffb1,#deffc4,#58d885,#f2f9ea);
+  background-size: 250%;
+  background-position: left;
+  color: #359851;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition-duration: 1s;
+  overflow: hidden;
+}
+
+.button::before {
+  position: absolute;
+  content: "";
+ font-family: "Beiruti", sans-serif;
+  top: 0;
+  color: #95ff00;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 97%;
+  height: 90%;
+  border-radius: 8px;
+  transition-duration: 1s;
+  background-color: rgba(0, 0, 0, 0.842);
+  background-size: 200%;
+}
+
+.button:hover {
+  background-position: right;
+  transition-duration: 1s;
+  scale: 1.2;
+}
+
+.button:hover::before {
+  background-position: right;
+  transition-duration: 1s;
+}
+
+.button:active {
+  transform: scale(0.9);
+}
